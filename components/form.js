@@ -75,7 +75,7 @@ export default function Form() {
 								question = JSON.parse(question)
 							}
 							return (
-								<div className="card mb-3">
+								<div className="card mb-3" key={index}>
 									<h5 className="card-header">
 										Question {index + 1}
 									</h5>
@@ -100,6 +100,7 @@ export default function Form() {
 										{question.distractors.map(
 											(distractor, index) => (
 												<input
+                                                    key={index}
 													type="text"
 													value={distractor}
 													className="form-control is-invalid"
@@ -111,7 +112,7 @@ export default function Form() {
 									<div className="answerBox">
 										<input
 											type="text"
-											class="form-control"
+											className="form-control"
 											placeholder="Add answer..."
 											id="inputDefault"
 										></input>
