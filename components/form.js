@@ -22,7 +22,7 @@ export default function Form() {
 		data.append("count", event.target.count.value)
 		data.append("file", file)
 
-		const url = "https://eebb-2409-4040-d9e-d830-425b-8e5f-31da-24c3.ngrok.io/generate"
+		const url = "https://65a1-103-177-112-69.ngrok.io/generate"
 		fetch(url, {
 			method: "POST",
 			body: data,
